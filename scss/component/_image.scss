@@ -3,7 +3,7 @@
 // ** Nested and Appended Structure ** //
 .img {
     &-logo {
-        @include image;
+        @include center-element;
         @include md ($bp-tablet) {
             margin-left: initial;
             margin-right: initial;
@@ -11,11 +11,11 @@
     }
     
     &-avatar {
-        @include image ($margin-top: 10px, $max-width: 100%, $max-height: 100%);
+        @include center-element ($margin-top: 10px, $max-width: 100%, $max-height: 100%);
     }
 
     &-frame {
-        @include image ($margin-top: 10px, $max-width: 100%);
+        @include center-element ($margin-top: 10px, $max-width: 100%);
         padding: 13px;
         border: 1px solid $color-img-frame;
     }
