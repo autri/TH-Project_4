@@ -1,17 +1,17 @@
 // FONTS - Colors, Syling, and Spacing ============ //
 
 * {
-    font-family: 'Lato', sans-serif;
+    font-family: $font-primary;
     color: $color-text;
     box-sizing: border-box;
 }
 
-.headline-primary {
+h1 {
     color: $color-primary;
     margin-left: 10px;
 }
 
-.headline-secondary {
+h4 {
     font-weight: 300;
 }
 
@@ -19,7 +19,7 @@
 p {
     line-height: 1.45em;
     
-    .link {
+    a {
         color: $color-link;
         font-weight: 700;
     }
@@ -30,12 +30,11 @@ p {
 
 }
 
-a,
-.nav-link {
+a {
     text-decoration: none;
 }
 
-.blockquote {
+blockquote {
     font-size: 1.5em;
     font-weight: 300;
     font-style: italic;
@@ -50,7 +49,7 @@ a,
     color: white;
 }
 
-.input,
-.btn {
+input,
+button {
     font-size: 11px;
 }
