@@ -1,0 +1,67 @@
+// GRID LAYOUT ============ //
+
+.container {
+    padding: 0 10px;
+    @include md ($bp-tablet) {
+        max-width: 1400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+    @include md ($bp-tablet) {
+        flex-direction: row;
+    }
+}
+
+.centered {
+    @include md ($bp-tablet) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+[class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+    @include md ($bp-tablet) {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        align-items: center;
+
+        + [class^=col] {
+            margin-left: 10px;
+        }
+    }
+}
+
+// ** For Loop ** //
+
+@for $i from 1 through 12 {
+    .theme.col-#{$i} {
+        background-color: map-get($map: $col-colors, $key: 'color-col-#{$i}');
+    }
+    
+    @include md ($bp-tablet) {
+        .col-#{$i} {
+            flex-basis: $i * (25%/3);
+        }
+    }
+}
+
+.card {
+    flex-basis: 100%;
+}
+
+
+

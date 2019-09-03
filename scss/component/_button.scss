@@ -1,0 +1,25 @@
+// BUTTONS ============ //
+
+.btn {
+    margin-top: 15px;
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+    border-radius: 5px;
+    @include md ($bp-tablet) {
+        padding: 10px 30px;
+
+        + .btn {
+            margin-left: 10px;
+        }
+    }
+}
+
+// ** For each loop ** //
+
+@each $indicator, $color in $color-indicators {
+    .#{$indicator} {
+      background-color: $color;
+    }
+  }
+
