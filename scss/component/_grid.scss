@@ -4,26 +4,24 @@
     padding: 0 10px;
     @include md ($bp-tablet) {
         max-width: 1400px;
-        display: block;
         margin-left: auto;
         margin-right: auto;
+        @include flex($display: block)
     }
 }
 
 .row {
     display: flex;
-    flex-direction: column;
     padding: 1em 10px;
+    @include flex($direction: column);
     @include md ($bp-tablet) {
-        flex-direction: row;
+        @include flex($direction: row);
     }
 }
 
 .centered {
     @include md ($bp-tablet) {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        @include center-element;
     }
 }
 
@@ -34,10 +32,10 @@
     padding: 10px;
     border-radius: 5px;
     @include md ($bp-tablet) {
-        display: flex;
         justify-content: center;
         margin-top: 0;
         align-items: center;
+        @include flex($display: flex);
 
         + [class^=col] {
             margin-left: 10px;
@@ -54,13 +52,13 @@
     
     @include md ($bp-tablet) {
         .col-#{$i} {
-            flex-basis: $i * (25%/3);
+            @include flex($basis: $i * (25%/3));
         }
     }
 }
 
 .card {
-    flex-basis: 100%;
+    @include flex($basis: 100%);
 }
 
 
